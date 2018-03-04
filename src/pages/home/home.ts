@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { ActionSheetController } from 'ionic-angular';
+
+//Pages
 import {PpagePage} from "../ppage/ppage";
 import {RpagePage} from "../rpage/rpage";
 
@@ -9,14 +12,13 @@ import {RpagePage} from "../rpage/rpage";
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
-
-  }
+  constructor(public navCtrl: NavController, public actionSheetCtrl: ActionSheetController) {}
 
    private naame: string="";
+   private teext: string="";
 
  pushPpage(){
-    this.navCtrl.push(PpagePage, {rname: this.naame});
+    this.navCtrl.push(PpagePage, {rname: this.naame, rtext: this.teext});
 
  }
 
@@ -24,4 +26,6 @@ export class HomePage {
     this.navCtrl.setRoot(RpagePage, {rname: this.naame});
 
  }
+
+
 }

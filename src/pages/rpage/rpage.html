@@ -9,4 +9,21 @@
 
 <ion-content padding id="centerdiv">
   <p>You have reached the rooted page {{this.navParams.get('rname')}} !!</p>
+  <button margin-top="7" ion-button (tap)="goToHome()">Home</button>
+  <br>
+
+  <ion-list [virtualScroll]="items" approxItemHeight="10px">
+
+    <ion-item detail-push *virtualItem="let item">
+      <ion-avatar item-start>
+        <ion-img [src]="item.url"></ion-img>
+      </ion-avatar>
+        <ion-label>{{item.name}}</ion-label>
+        <button ion-button outline item-end >View</button>
+
+    </ion-item>
+
+
+  </ion-list>
+
 </ion-content>

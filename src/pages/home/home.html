@@ -9,16 +9,22 @@
 <ion-content id="centerdiv">
   <div class="card">
 
-  <ion-item>
+    <img margin-top="15px" src="../../assets/icon/logo.png" width="40%" height="40%" >
+
+  <h4>Welcome to my app !</h4>
+    <ion-item>
     <ion-label color="primary"  floating>Name</ion-label>
     <ion-input [(ngModel)]="naame"></ion-input>
-  </ion-item>
+    </ion-item>
+    <ion-item>
+    <ion-textarea rows="4" placeholder="Enter text to count words using a pipe through the push button" [(ngModel)]="teext"></ion-textarea>
+    </ion-item>
 
-    <h4>Welcome to my app !</h4>
-
+    <div margin-top="15px">
     <button ion-button (tap)="pushPpage()" color="dark">Push</button>
     <button ion-button (tap)="rootRpage()" color="dark">Root</button>
 
+    </div>
 
   </div>
 </ion-content>

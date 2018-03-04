@@ -8,6 +8,11 @@
 
 
 <ion-content padding id="centerdiv">
-<p>You have reached the pushed page {{this.navParams.get('rname')}} !!</p>
+<h4>You have reached the pushed page {{this.navParams.get('rname')}} !!</h4>
+  <p *ngIf="(this.navParams.get('rtext') | wc) == null; else notEmpty">You entered no text</p>
+  <ng-template #notEmpty>
+    <p>The text you entered contains {{this.navParams.get('rtext') | wc}} words</p>
+  </ng-template>
+
 
 </ion-content>
