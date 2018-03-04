@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Learning shit
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content id="centerdiv">
+  <div class="card">
+
+  <ion-item>
+    <ion-label color="primary"  floating>Name</ion-label>
+    <ion-input [(ngModel)]="naame"></ion-input>
+  </ion-item>
+
+    <h4>Welcome to my app !</h4>
+
+    <button ion-button (tap)="pushPpage()" color="dark">Push</button>
+    <button ion-button (tap)="rootRpage()" color="dark">Root</button>
+
+
+  </div>
+</ion-content>
