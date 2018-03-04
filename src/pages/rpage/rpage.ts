@@ -28,9 +28,8 @@ export class RpagePage {
     });
   }
 
-  goToHome(){
+  goToHome() {
     this.navCtrl.setRoot(HomePage);
-
   }
 
 }
