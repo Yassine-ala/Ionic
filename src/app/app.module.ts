@@ -37,7 +37,7 @@ import {JsonhttpPage} from "../pages/jsonhttp/jsonhttp";
   ],
   imports: [
     BrowserModule,
-      HttpClientModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
