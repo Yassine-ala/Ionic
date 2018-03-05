@@ -27,6 +27,7 @@ export class FootermenuComponent {
             type: 'radio',
             label: 'white',
             value: 'light',
+            checked: true
         });
 
         alert.addInput({
@@ -47,7 +48,7 @@ export class FootermenuComponent {
 
     showActionSheet(){
         let menuActionSheet = this.actionSheetCtrl.create({
-            title: 'Browse',
+            title: 'Options Menu',
             buttons: [
                 {
                     text: 'Change theme',

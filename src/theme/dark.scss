@@ -1,6 +1,7 @@
 .dark {
+
   ion-content {
-    background-color: #090f2f;
+    background-color:  #262673;
     color: #fff;
   }
 
@@ -9,7 +10,10 @@
   }
 
   .header .toolbar-background {
-    border-color: #ff0fff;
-    background-color: #090f2f;
+    background-color: #99004d;
+  }
+
+  .nav-header {
+    background-color: blue;
   }
 }

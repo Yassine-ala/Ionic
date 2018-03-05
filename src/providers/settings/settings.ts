@@ -11,7 +11,6 @@ export class SettingsProvider {
   }
 
   setActiveTheme(val){
-
     this.theme.next(val);
 }
 

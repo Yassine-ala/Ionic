@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>JSON HTTP</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <h4>
+    This page uses an API to search and display your favourite movies and series
+  </h4>
+
+  <ion-list inset>
+    <ion-item *ngFor="let user of users">
+      <h2>{{user.name}}</h2>
+      <p>{{user.email}}</p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
