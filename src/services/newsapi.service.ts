@@ -16,6 +16,7 @@ export class NewsApiService {
 
     }
 
+    /*
     apiUrl = 'https://jsonplaceholder.typicode.com';
 
     getUsers() {
@@ -38,17 +39,21 @@ export class NewsApiService {
                 });
         });
     }
+*/
 
-/*
-private baseUrl: string = 'https://newsapi.org/v2/';
-private source: string = 'the-next-web';
+private baseUrl: string = 'https://newsapi.org/v2/top-headlines/';
 private apiKey: string = 'f1a1bfbba3ae495897a3c5281dadf35f';
 
 public getArticles() {
-    const url = `${this.baseUrl}artices?source=${this.source}&sortBy=latest&apiKey=${this.apiKey}`;
-    return this.http.get(url)
-        .toPromise()
-        .then(response => response.json() as NewsApiGlobal)
-        .catch(error => console.log('Une erreur est survenue ' + error))
-}*/
+
+    return new Promise(resolve => {
+        const url = `${this.baseUrl}?country=fr&apiKey=${this.apiKey}`;
+        this.http.get(url).subscribe(data => {
+            resolve(data);
+        }, err => {
+            console.log(err);
+        });
+    });
+
+}
 }

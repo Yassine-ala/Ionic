@@ -3,7 +3,7 @@ import { IonicPage, NavController } from 'ionic-angular';
 
 import { NewsApiService} from "../../services/newsapi.service";
 
-//import { NewsApiGlobal} from "../../models/newsapi-global.model";
+import { NewsApiGlobal} from "../../models/newsapi-global.model";
 
 @IonicPage()
 @Component({
@@ -13,22 +13,26 @@ import { NewsApiService} from "../../services/newsapi.service";
 
 export class JsonhttpPage {
 
-  //news: NewsApiGlobal;
+  news: any;
 
-    users: any;
+   // users: any;
 
   constructor(public navCtrl: NavController, private newsApiService: NewsApiService) {
 
-      this.getUsers();
+      // this.getUsers();
 
-   /* this.newsApiService.getArticles()
-        .then(newsFetched => {
-            this.news = newsFetched;
-            console.log(this.news);
-        });*/
+    this.getArticles();
 
   }
 
+    getArticles() {
+        this.newsApiService.getArticles()
+            .then(data => {
+                this.news = data;
+                console.log(this.news);
+            });
+    }
+  /*
     getUsers() {
         this.newsApiService.getUsers()
             .then(data => {
@@ -36,5 +40,5 @@ export class JsonhttpPage {
                 console.log(this.users);
             });
     }
-
+*/
 }
