@@ -8,7 +8,6 @@ import {SettingsProvider} from "../../providers/settings/settings";
 })
 export class FootermenuComponent {
 
-  text: string;
   selectedTheme: string;
 
   constructor(private alertCtrl: AlertController, private settings: SettingsProvider, private actionSheetCtrl: ActionSheetController) {

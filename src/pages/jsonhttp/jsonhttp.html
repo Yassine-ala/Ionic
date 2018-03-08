@@ -6,16 +6,53 @@
 
 <ion-content>
 
-  <h4>
-    This page uses an API to search and display your favourite movies and series
-  </h4>
+    <div>
+        <h2 style="text-align: center">NewsApi.org news Headings</h2>
+        <hr>
+        <h4>Résults : {{stat.totalResults}}</h4>
+        <h4>Status : {{stat.status}}</h4>
+        <hr>
+    </div>
 
-  <ion-list inset>
-    <ion-item *ngFor="let n of news">
-      <h4 style="font-weight: bold;">{{n.author}}</h4>
-      <h4>{{n.title}}</h4>
-      <p>{{n.source.name}}</p>
-    </ion-item>
-  </ion-list>
+  <ion-card *ngFor="let aut of art.author; let i = index">
+
+    <img src="{{art.urlToImage[i]}}">
+
+    <ion-card-content>
+      <ion-card-title>
+        {{art.title[i]}}
+      </ion-card-title>
+      <p>
+        {{art.description[i]}}
+      </p>
+    </ion-card-content>
+
+    <ion-row >
+        <ion-col text-center>
+           <b>{{art.author[i]}}</b>
+        </ion-col>
+        <ion-col text-right>
+            {{art.publishedAt[i] | tm}}
+        </ion-col>
+    </ion-row>
+
+    <ion-row no-padding>
+      <ion-col text-center>
+        <button ion-button clear small color="primary" icon-start>
+          <ion-icon name='share-alt'></ion-icon>
+          Share
+        </button>
+      </ion-col>
+      <ion-col text-right>
+        <a href="{{art.url[i]}}">
+          <button ion-button  small color="primary" icon-start>
+          <ion-icon name='globe'></ion-icon>
+          Link
+          </button></a>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
 
 </ion-content>

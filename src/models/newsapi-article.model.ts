@@ -1,13 +1,13 @@
-import {NewsApiSource} from "./newsapi-source.model";
 
 export class NewsApiArticle{
 
-    source: NewsApiSource;
-    author: string;
-    title: string;
-    description: string;
-    url: string;
-    urlToImage: string;
-    publishedAt: string;
+ //   source: NewsApiSource[];
+    author: any = [];
+    title: any = [];
+    description: any = [];
+    url: any = [];
+    publishedAt: any = [];
+    urlToImage: any = [];
+
 
 }

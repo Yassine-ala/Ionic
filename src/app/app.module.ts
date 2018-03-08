@@ -10,6 +10,7 @@ import { FootermenuComponent} from "../components/footermenu/footermenu";
 
 //Pipes
 import { WordcountPipe} from "../pipes/wordcount/wordcount";
+import { TimemodPipe} from "../pipes/timemod/timemod";
 
 //Providers & Services
 import { SettingsProvider } from '../providers/settings/settings';
@@ -23,8 +24,6 @@ import {RpagePage} from "../pages/rpage/rpage";
 import {JsonhttpPage} from "../pages/jsonhttp/jsonhttp";
 
 
-
-
 @NgModule({
   declarations: [
     MyApp,
@@ -33,7 +32,9 @@ import {JsonhttpPage} from "../pages/jsonhttp/jsonhttp";
     RpagePage,
     JsonhttpPage,
     WordcountPipe,
+    TimemodPipe,
     FootermenuComponent
+
   ],
   imports: [
     BrowserModule,

@@ -12,7 +12,7 @@ export class NewsApiService {
 private baseUrl: string = 'https://newsapi.org/v2/top-headlines/';
 private apiKey: string = 'f1a1bfbba3ae495897a3c5281dadf35f';
 
-public getArticles() {
+public getArticles()  {
 
     return new Promise(resolve => {
         const url = `${this.baseUrl}?country=fr&apiKey=${this.apiKey}`;
