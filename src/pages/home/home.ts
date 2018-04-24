@@ -20,6 +20,8 @@ export class HomePage {
    private naame: string="";
    private teext: string="";
 
+    rating: number = 0;
+
  pushPpage(){
     this.navCtrl.push(PpagePage, {rname: this.naame, rtext: this.teext});
 
